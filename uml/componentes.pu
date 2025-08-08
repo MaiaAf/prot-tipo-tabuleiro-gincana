@@ -1,0 +1,12 @@
+@startuml
+
+[Comvida]
+
+[tabuleiro]
+
+[ui] -> [Missões]
+
+[Missões] -> [Comvida]
+
+
+@enduml

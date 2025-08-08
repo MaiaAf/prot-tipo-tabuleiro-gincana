@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv6dsjqsiaefl"]
+
+[ext_resource type="Script" uid="uid://cfdlikv8wbb4b" path="res://scripts/comvida_ui.gd" id="1_qpfgw"]
+
+[node name="comvida" type="MarginContainer"]
+custom_minimum_size = Vector2(256, 64)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+script = ExtResource("1_qpfgw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 128)
+layout_mode = 2
+
+[node name="VScrollBar" type="ScrollContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="missoes" type="VBoxContainer" parent="HBoxContainer/VScrollBar"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VScrollBar/missoes"]
+layout_mode = 2
+text = "Comvida x"
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/VScrollBar/missoes"]
+layout_mode = 2
+text = "zona 1 tarefa 1"
+
+[node name="CheckBox2" type="CheckBox" parent="HBoxContainer/VScrollBar/missoes"]
+layout_mode = 2
+text = "zona 1 tarefa 2"
+
+[node name="CheckBox3" type="CheckBox" parent="HBoxContainer/VScrollBar/missoes"]
+layout_mode = 2
+text = "zona 1 tarefa 3"
+
+[node name="CheckBox4" type="CheckBox" parent="HBoxContainer/VScrollBar/missoes"]
+layout_mode = 2
+text = "zona 1 tarefa 3"
+
+[node name="CheckBox5" type="CheckBox" parent="HBoxContainer/VScrollBar/missoes"]
+layout_mode = 2
+text = "zona 1 tarefa 3"
+
+[node name="CheckBox6" type="CheckBox" parent="HBoxContainer/VScrollBar/missoes"]
+layout_mode = 2
+text = "zona 1 tarefa 3"

@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://panj6ddywedg"]
+
+[ext_resource type="Script" uid="uid://lqimauh3r70o" path="res://scripts/tabuleiro.gd" id="1_jrw47"]
+[ext_resource type="PackedScene" uid="uid://bsifq5s8bs2um" path="res://cenas/mapa.tscn" id="1_p3p16"]
+[ext_resource type="Script" uid="uid://c12jfjhb2pk23" path="res://scripts/classes/comvida.gd" id="3_25161"]
+[ext_resource type="Script" uid="uid://dtkfc3c4wc7mg" path="res://addons/asset-library-MapCamera2D-4-e1c3aa7a8333411369c8fd8b43f6a56f30e6adc5/MapCamera2D.gd" id="3_jrw47"]
+[ext_resource type="PackedScene" uid="uid://mcrkprqp5u8n" path="res://cenas/ui.tscn" id="4_xvxqs"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lwu61"]
+size = Vector2(128, 256)
+
+[node name="Tabuleiro" type="Node2D"]
+script = ExtResource("1_jrw47")
+
+[node name="Mapa" parent="." instance=ExtResource("1_p3p16")]
+
+[node name="Comvida" type="Sprite2D" parent="."]
+modulate = Color(1.85785e-05, 0.173861, 0.534734, 1)
+position = Vector2(1280, -1024)
+texture = SubResource("PlaceholderTexture2D_lwu61")
+script = ExtResource("3_25161")
+nome_comvida = "Comvida 1"
+
+[node name="Comvida4" type="Sprite2D" parent="."]
+modulate = Color(0.701454, 0.00521574, 0.260008, 1)
+position = Vector2(1408, -1088)
+texture = SubResource("PlaceholderTexture2D_lwu61")
+script = ExtResource("3_25161")
+nome_comvida = "Comvida 4"
+
+[node name="Comvida3" type="Sprite2D" parent="."]
+modulate = Color(0.5048, 0.340211, 1.92523e-07, 1)
+position = Vector2(1152, -1088)
+texture = SubResource("PlaceholderTexture2D_lwu61")
+script = ExtResource("3_25161")
+nome_comvida = "Comvida 3"
+
+[node name="Comvida2" type="Sprite2D" parent="."]
+modulate = Color(0, 0.260709, 0.217665, 1)
+position = Vector2(1408, -960)
+texture = SubResource("PlaceholderTexture2D_lwu61")
+script = ExtResource("3_25161")
+nome_comvida = "Comvida 2"
+
+[node name="MapCamera2D" type="Camera2D" parent="."]
+position = Vector2(1523, -904)
+zoom = Vector2(0.2, 0.2)
+script = ExtResource("3_jrw47")
+zoom_min = 0.07
+metadata/_custom_type_script = "uid://dtkfc3c4wc7mg"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("4_xvxqs")]
